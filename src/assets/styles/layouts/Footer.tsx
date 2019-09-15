@@ -27,6 +27,5 @@ export const FooterText = styled((props) => <Paragraph {...props} />)`
 `;
 
 export const DashboardFooter = styled((props) => <Footer {...props} />)`
-	background: #fff;
 	text-align: center;
 `;

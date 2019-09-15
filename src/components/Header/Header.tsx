@@ -24,19 +24,17 @@ const Header: FunctionComponent = () => {
 	const { history } = useRouter();
 
 	return (
-		<nav id="app-header">
-			<DashboardHeader>
-				<HeaderNavigation>
-					<HeaderLogo src={logo} />
-					<HeaderNavItem>Cursos</HeaderNavItem>
-				</HeaderNavigation>
-				<HeaderPerfil>
-					<Dropdown overlay={<Menu history={history} />}>
-						<Button shape="circle" icon="user" />
-					</Dropdown>
-				</HeaderPerfil>
-			</DashboardHeader>
-		</nav>
+		<DashboardHeader>
+			<HeaderNavigation>
+				<HeaderLogo src={logo} />
+				<HeaderNavItem>Cursos</HeaderNavItem>
+			</HeaderNavigation>
+			<HeaderPerfil>
+				<Dropdown overlay={<Menu history={history} />}>
+					<Button shape="circle" icon="user" />
+				</Dropdown>
+			</HeaderPerfil>
+		</DashboardHeader>
 	);
 };
 

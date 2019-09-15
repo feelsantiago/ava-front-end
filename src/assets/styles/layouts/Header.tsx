@@ -26,3 +26,8 @@ export const HeaderLogo = styled.img`
 	margin-left: 50px;
 	cursor: pointer;
 `;
+
+export const HeaderPerfil = styled.div`
+	float: right;
+	margin-right: 50px;
+`;

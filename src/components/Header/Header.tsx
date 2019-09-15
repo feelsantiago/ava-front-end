@@ -7,10 +7,11 @@
  */
 
 import React, { FunctionComponent } from 'react';
+import { Dropdown, Button } from 'antd';
 import useRouter from 'use-react-router';
 
-import { DashboardHeader, HeaderLogo } from '../../assets/styles/layouts/Header';
-import authService from '../../services/auth-service';
+import { DashboardHeader, HeaderLogo, HeaderPerfil } from '../../assets/styles/layouts/Header';
+import Menu from './Menu';
 import logo from '../../assets/images/ava-logo.png';
 
 const Header: FunctionComponent = () => {
@@ -20,6 +21,11 @@ const Header: FunctionComponent = () => {
 		<div id="app-header">
 			<DashboardHeader>
 				<HeaderLogo src={logo} />
+				<HeaderPerfil>
+					<Dropdown overlay={<Menu history={history} />}>
+						<Button shape="circle" icon="user" />
+					</Dropdown>
+				</HeaderPerfil>
 			</DashboardHeader>
 		</div>
 	);

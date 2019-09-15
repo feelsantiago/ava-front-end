@@ -13,7 +13,7 @@ import styled from 'styled-components';
 const { Header } = Layout;
 
 export const DashboardHeader = styled((props) => <Header {...props} />)`
-	background: #fff; 
+	background: #000B30; 
 	padding: 0;
 	position: fixed;
     z-index: 1;

@@ -13,21 +13,22 @@ import styled from 'styled-components';
 const { Content } = Layout;
 
 export const DashboardContent = styled((props) => <Content {...props} />)`
-	margin: 24px 16px; 
+	margin: 24px 50px; 
 	overflow: initial
 `;
 
 export const DashboardChildrenContent = styled.div`
 	padding: 24px;
 	background: #fff;
-	min-height: 370px;
+	min-height: 420px;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
 export const Container = styled.div`
 	height: 100vh;
 	-ms-flex: 1 1;
 	flex: 1 1;
-	width: calc(100% - 256px);
+	width: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
 `;

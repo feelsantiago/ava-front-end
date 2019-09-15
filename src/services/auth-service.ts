@@ -21,8 +21,8 @@ class AuthService {
 			localStorage.setItem(this.user_key, JSON.stringify(user));
 		}
 
-		token = token;
-		user = user;
+		this.token = token;
+		this.user = user;
 	}
 
 	isAutheticated (): boolean {

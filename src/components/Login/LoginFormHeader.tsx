@@ -10,13 +10,15 @@ import React, { FunctionComponent } from 'react';
 
 import { LoginLogo, LoginCardHeader } from '../../assets/styles/components/LoginForm';
 import { AppName } from '../../assets/styles/components/Common';
-import logo from '../../assets/images/shortify-logo.png';
+import logo from '../../assets/images/ava-logo.png';
 
 const LoginFormHeader: FunctionComponent = () => {
 	return (
 		<LoginCardHeader>
 			<LoginLogo alt="logo" src={logo} />
-			<AppName>Shortify</AppName>
+			<div>
+				<AppName>Ava da Kebrada</AppName>
+			</div>
 		</LoginCardHeader>
 	);
 };

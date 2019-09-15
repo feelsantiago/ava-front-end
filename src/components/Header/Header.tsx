@@ -7,10 +7,12 @@
  */
 
 import React, { FunctionComponent } from 'react';
+import { Dropdown, Button } from 'antd';
 import useRouter from 'use-react-router';
 
-import { DashboardHeader } from '../../assets/styles/layouts/Header';
-import authService from '../../services/auth-service';
+import { DashboardHeader, HeaderLogo, HeaderPerfil } from '../../assets/styles/layouts/Header';
+import Menu from './Menu';
+import logo from '../../assets/images/ava-logo.png';
 
 const Header: FunctionComponent = () => {
 	const { history } = useRouter();
@@ -18,14 +20,12 @@ const Header: FunctionComponent = () => {
 	return (
 		<div id="app-header">
 			<DashboardHeader>
-				<a
-					onClick={() => {
-						authService.logout();
-						history.push('/login');
-					}}
-				>
-					Logout
-				</a>
+				<HeaderLogo src={logo} />
+				<HeaderPerfil>
+					<Dropdown overlay={<Menu history={history} />}>
+						<Button shape="circle" icon="user" />
+					</Dropdown>
+				</HeaderPerfil>
 			</DashboardHeader>
 		</div>
 	);

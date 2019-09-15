@@ -3,7 +3,7 @@ import { Menu, Icon } from 'antd';
 
 import { Sider, SideBarLogo, SideBarLogoImg } from '../../assets/styles/components/Sidebar';
 import { AppName } from '../../assets/styles/components/Common';
-import logo from '../../assets/images/shortify-logo.png';
+import logo from '../../assets/images/ava-logo.png';
 
 const { SubMenu } = Menu;
 

@@ -13,9 +13,21 @@ import styled from 'styled-components';
 const { Header } = Layout;
 
 export const DashboardHeader = styled((props) => <Header {...props} />)`
-	background: #fff; 
+	background: #000B30; 
 	padding: 0;
 	position: fixed;
     z-index: 1;
     width: 100%;
+`;
+
+export const HeaderLogo = styled.img`
+	width: 35px;
+	height: 35px;
+	margin-left: 50px;
+	cursor: pointer;
+`;
+
+export const HeaderPerfil = styled.div`
+	float: right;
+	margin-right: 50px;
 `;

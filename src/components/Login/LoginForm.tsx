@@ -61,25 +61,25 @@ const LoginForm: FunctionComponent<FormComponentProps> = ({ form }) => {
 			>
 				<Form.Item>
 					{getFieldDecorator('username', {
-						rules: [ { required: true, message: 'Please input your username!' } ]
-					})(<Input prefix={<LoginIcon type="user" />} placeholder="Username" />)}
+						rules: [ { required: true, message: 'Por favor insira seu nome de usuário!' } ]
+					})(<Input prefix={<LoginIcon type="user" />} placeholder="Usuário" />)}
 				</Form.Item>
 				<Form.Item>
 					{getFieldDecorator('password', {
-						rules: [ { required: true, message: 'Please input your Password!' } ]
-					})(<Input prefix={<LoginIcon type="lock" />} type="password" placeholder="Password" />)}
+						rules: [ { required: true, message: 'Por favor insira sua senha!' } ]
+					})(<Input prefix={<LoginIcon type="lock" />} type="password" placeholder="Senha" />)}
 				</Form.Item>
 				<Form.Item>
 					{getFieldDecorator('remember', {
 						valuePropName: 'checked',
 						initialValue: true
-					})(<Checkbox>Remember me</Checkbox>)}
-					<LoginForgot href="">Forgot password</LoginForgot>
+					})(<Checkbox>Lembra-se</Checkbox>)}
+					<LoginForgot href="">Esqueci a senha</LoginForgot>
 					<LoginSubmitButton type="primary" htmlType="submit">
-						Log in
+						Entrar
 					</LoginSubmitButton>
 					<TextCenter>
-						Or <a href="/">register now!</a>
+						Ou <a href="/">Registre-se!</a>
 					</TextCenter>
 				</Form.Item>
 			</Form>

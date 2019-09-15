@@ -9,7 +9,6 @@
 import React, { FunctionComponent } from 'react';
 import { Layout, Breadcrumb, BackTop } from 'antd';
 
-import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import { DashboardContent, DashboardChildrenContent, Container } from '../assets/styles/layouts/Content';
 import { DashboardFooter, FooterText } from '../assets/styles/layouts/Footer';
@@ -18,7 +17,6 @@ const Dashboard: FunctionComponent = ({ children }) => {
 	return (
 		<div id="app-dashboard">
 			<Layout>
-				<Sidebar />
 				<Container>
 					<Header />
 					<DashboardContent>

@@ -27,3 +27,5 @@ export const AppName = styled.span`
 	-webkit-text-fill-color: transparent;
 	font-size: 20px;
 `;
+
+export const Padding = styled.div`padding: ${(props: { value: number }) => props.value}px;`;

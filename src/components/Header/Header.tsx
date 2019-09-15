@@ -10,7 +10,13 @@ import React, { FunctionComponent } from 'react';
 import { Dropdown, Button } from 'antd';
 import useRouter from 'use-react-router';
 
-import { DashboardHeader, HeaderLogo, HeaderPerfil } from '../../assets/styles/layouts/Header';
+import {
+	DashboardHeader,
+	HeaderLogo,
+	HeaderPerfil,
+	HeaderNavigation,
+	HeaderNavItem
+} from '../../assets/styles/layouts/Header';
 import Menu from './Menu';
 import logo from '../../assets/images/ava-logo.png';
 
@@ -18,16 +24,17 @@ const Header: FunctionComponent = () => {
 	const { history } = useRouter();
 
 	return (
-		<div id="app-header">
-			<DashboardHeader>
+		<DashboardHeader>
+			<HeaderNavigation>
 				<HeaderLogo src={logo} />
-				<HeaderPerfil>
-					<Dropdown overlay={<Menu history={history} />}>
-						<Button shape="circle" icon="user" />
-					</Dropdown>
-				</HeaderPerfil>
-			</DashboardHeader>
-		</div>
+				<HeaderNavItem>Cursos</HeaderNavItem>
+			</HeaderNavigation>
+			<HeaderPerfil>
+				<Dropdown overlay={<Menu history={history} />}>
+					<Button shape="circle" icon="user" />
+				</Dropdown>
+			</HeaderPerfil>
+		</DashboardHeader>
 	);
 };
 

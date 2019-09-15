@@ -12,6 +12,12 @@ import styled from 'styled-components';
 
 const { Content } = Layout;
 
+export const DashboardLayout = styled((props) => <Layout {...props} />)`
+	height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+`;
+
 export const DashboardContent = styled((props) => <Content {...props} />)`
 	margin: 24px 50px; 
 	overflow: initial
@@ -20,15 +26,6 @@ export const DashboardContent = styled((props) => <Content {...props} />)`
 export const DashboardChildrenContent = styled.div`
 	padding: 24px;
 	background: #fff;
-	min-height: 420px;
+	min-height: 400px;
 	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
-`;
-
-export const Container = styled.div`
-	height: 100vh;
-	-ms-flex: 1 1;
-	flex: 1 1;
-	width: 100%;
-	overflow-y: auto;
-	overflow-x: hidden;
 `;

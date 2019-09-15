@@ -6,13 +6,30 @@
  * @desc Dashboard home page
  */
 
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
+
+import { HomeCard, HomeCardAdd, HomeCardText, HomeContent, AddPlusImg } from '../../assets/styles/pages/Home';
+import plus from '../../assets/images/plus.png';
 
 const Home: FunctionComponent = () => {
 	return (
-		<div id="app-home">
-			<h2>Home</h2>
-		</div>
+		<HomeContent id="app-home">
+			<HomeCard background="#DCDE6D">
+				<HomeCardText>Javascript</HomeCardText>
+			</HomeCard>
+			<HomeCard background="#DCDE6D">
+				<HomeCardText>Javascript</HomeCardText>
+			</HomeCard>
+			<HomeCard background="#DCDE6D">
+				<HomeCardText>Javascript</HomeCardText>
+			</HomeCard>
+			<HomeCard background="#DCDE6D">
+				<HomeCardText>Javascript</HomeCardText>
+			</HomeCard>
+			<HomeCardAdd>
+				<AddPlusImg src={plus} />
+			</HomeCardAdd>
+		</HomeContent>
 	);
 };
 

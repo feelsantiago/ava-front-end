@@ -17,7 +17,9 @@ export const DashboardHeader = styled((props) => <Header {...props} />)`
 	padding: 0;
 	position: fixed;
     z-index: 1;
-    width: 100%;
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
 `;
 
 export const HeaderLogo = styled.img`
@@ -30,4 +32,19 @@ export const HeaderLogo = styled.img`
 export const HeaderPerfil = styled.div`
 	float: right;
 	margin-right: 50px;
+`;
+
+export const HeaderNavigation = styled.div`
+	display: flex;
+	align-items: center;
+	width: 100%;
+`;
+
+export const HeaderNavItem = styled.div`
+	margin: 0 25px;
+	display: flex;
+	color: white;
+	background: #1890ff;
+	height: 64px;
+	padding: 0 20px;
 `;

@@ -8,10 +8,14 @@
 
 import React, { FunctionComponent } from 'react';
 
+import { HomeCard, HomeCardText } from '../../assets/styles/pages/Home';
+
 const Home: FunctionComponent = () => {
 	return (
 		<div id="app-home">
-			<h2>Home</h2>
+			<HomeCard background="#DCDE6D">
+				<HomeCardText>Javascript</HomeCardText>
+			</HomeCard>,
 		</div>
 	);
 };

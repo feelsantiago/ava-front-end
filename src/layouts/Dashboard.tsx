@@ -27,7 +27,7 @@ const Dashboard: FunctionComponent = ({ children }) => {
 					</DashboardContent>
 					<BackTop />
 					<DashboardFooter>
-						<FooterText>Upplify Inc ©2019</FooterText>
+						<FooterText>Santiago's Bros. ©2019</FooterText>
 					</DashboardFooter>
 				</Container>
 			</Layout>

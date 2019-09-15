@@ -19,3 +19,10 @@ export const DashboardHeader = styled((props) => <Header {...props} />)`
     z-index: 1;
     width: 100%;
 `;
+
+export const HeaderLogo = styled.img`
+	width: 35px;
+	height: 35px;
+	margin-left: 50px;
+	cursor: pointer;
+`;

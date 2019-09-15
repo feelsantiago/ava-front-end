@@ -9,8 +9,9 @@
 import React, { FunctionComponent } from 'react';
 import useRouter from 'use-react-router';
 
-import { DashboardHeader } from '../../assets/styles/layouts/Header';
+import { DashboardHeader, HeaderLogo } from '../../assets/styles/layouts/Header';
 import authService from '../../services/auth-service';
+import logo from '../../assets/images/ava-logo.png';
 
 const Header: FunctionComponent = () => {
 	const { history } = useRouter();
@@ -18,14 +19,7 @@ const Header: FunctionComponent = () => {
 	return (
 		<div id="app-header">
 			<DashboardHeader>
-				<a
-					onClick={() => {
-						authService.logout();
-						history.push('/login');
-					}}
-				>
-					Logout
-				</a>
+				<HeaderLogo src={logo} />
 			</DashboardHeader>
 		</div>
 	);

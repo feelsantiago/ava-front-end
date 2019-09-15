@@ -21,8 +21,7 @@ const Dashboard: FunctionComponent = ({ children }) => {
 					<Header />
 					<DashboardContent>
 						<Breadcrumb style={{ margin: '84px 16px 16px 0px' }}>
-							<Breadcrumb.Item>User</Breadcrumb.Item>
-							<Breadcrumb.Item>Bill</Breadcrumb.Item>
+							<Breadcrumb.Item>Cursos</Breadcrumb.Item>
 						</Breadcrumb>
 						<DashboardChildrenContent>{children}</DashboardChildrenContent>
 					</DashboardContent>

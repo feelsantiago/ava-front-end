@@ -16,7 +16,9 @@ const LoginFormHeader: FunctionComponent = () => {
 	return (
 		<LoginCardHeader>
 			<LoginLogo alt="logo" src={logo} />
-			<AppName>Shortify</AppName>
+			<div>
+				<AppName>Ava da Kebrada</AppName>
+			</div>
 		</LoginCardHeader>
 	);
 };

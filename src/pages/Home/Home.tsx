@@ -16,21 +16,6 @@ const Home: FunctionComponent = () => {
 			<HomeCard background="#DCDE6D">
 				<HomeCardText>Javascript</HomeCardText>
 			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
 		</div>
 	);
 };

@@ -28,6 +28,10 @@ export const HomeCard = styled((props) => <Card {...props} />)`
 export const HomeCardAdd = styled(HomeCard)`
 	background: #FFF;
 	border: 1px dashed #92d5fb !important;
+
+	:hover {
+		border: 1px solid #92d5fb !important;
+	}
 `;
 
 export const AddPlusImg = styled.img`

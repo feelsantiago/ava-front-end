@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Card } from 'antd';
 
-import plus from '../../images/plus.png';
-
 interface HomeCardProps {
 	background: string;
 }

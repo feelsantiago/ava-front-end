@@ -13,6 +13,7 @@ import Dashboard from './layouts/Dashboard';
 import Home from './pages/Home';
 import About from './pages/About';
 import authGuard from './guards/auth-guard';
+import Curso from './pages/Curso';
 
 const routes: Array<Route> = [
 	{
@@ -40,6 +41,11 @@ const routes: Array<Route> = [
 			{
 				path: 'about',
 				component: About
+			},
+			{
+				path: 'curso',
+				exact: true,
+				component: Curso
 			}
 		]
 	}

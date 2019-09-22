@@ -24,7 +24,7 @@ export const DashboardContent = styled((props) => <Content {...props} />)`
 `;
 
 export const DashboardChildrenContent = styled.div`
-	padding: 24px;
+	padding: ${(props: { padding: boolean }) => (props.padding ? '24px' : '0')};
 	background: #fff;
 	min-height: 400px;
 	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);

@@ -13,8 +13,12 @@ import Header from '../components/Header';
 import { DashboardContent, DashboardChildrenContent, DashboardLayout } from '../assets/styles/layouts/Content';
 import { DashboardFooter, FooterText } from '../assets/styles/layouts/Footer';
 import { Padding } from '../assets/styles/components/Common';
+import { useSelector } from 'react-redux';
+import { AppState } from '../redux/store';
 
 const Dashboard: FunctionComponent = ({ children }) => {
+	const layout = useSelector((state: AppState) => state.layout);
+
 	return (
 		<div id="app-dashboard">
 			<DashboardLayout>
@@ -23,7 +27,7 @@ const Dashboard: FunctionComponent = ({ children }) => {
 					<Breadcrumb style={{ margin: '84px 16px 16px 0px' }}>
 						<Breadcrumb.Item>Cursos</Breadcrumb.Item>
 					</Breadcrumb>
-					<DashboardChildrenContent>{children}</DashboardChildrenContent>
+					<DashboardChildrenContent padding={layout.state.padding}>{children}</DashboardChildrenContent>
 					<Padding value={10} />
 					<DashboardFooter>
 						<FooterText>Santiago's Bros. ©2019</FooterText>

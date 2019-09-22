@@ -17,7 +17,7 @@ import { useSelector } from 'react-redux';
 import { AppState } from '../redux/store';
 
 const Dashboard: FunctionComponent = ({ children }) => {
-	const layout = useSelector((state: AppState) => state.layout);
+	const layout = useSelector((state: AppState) => state.layout.state);
 
 	return (
 		<div id="app-dashboard">
@@ -27,7 +27,7 @@ const Dashboard: FunctionComponent = ({ children }) => {
 					<Breadcrumb style={{ margin: '84px 16px 16px 0px' }}>
 						<Breadcrumb.Item>Cursos</Breadcrumb.Item>
 					</Breadcrumb>
-					<DashboardChildrenContent padding={layout.state.padding}>{children}</DashboardChildrenContent>
+					<DashboardChildrenContent padding={layout.padding}>{children}</DashboardChildrenContent>
 					<Padding value={10} />
 					<DashboardFooter>
 						<FooterText>Santiago's Bros. ©2019</FooterText>

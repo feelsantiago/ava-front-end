@@ -27,7 +27,7 @@ const Header: FunctionComponent = () => {
 		<DashboardHeader>
 			<HeaderNavigation>
 				<HeaderLogo src={logo} />
-				<HeaderNavItem>Cursos</HeaderNavItem>
+				<HeaderNavItem onClick={() => history.push('/')}>Cursos</HeaderNavItem>
 			</HeaderNavigation>
 			<HeaderPerfil>
 				<Dropdown overlay={<Menu history={history} />}>

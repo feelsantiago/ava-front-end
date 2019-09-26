@@ -47,4 +47,8 @@ export const HeaderNavItem = styled.div`
 	background: #1890ff;
 	height: 64px;
 	padding: 0 20px;
+
+	:hover {
+		cursor: pointer;
+	}
 `;

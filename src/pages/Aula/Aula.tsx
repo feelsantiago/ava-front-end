@@ -9,10 +9,11 @@ import Discussao from '../../components/Aula/Discussao';
 import Atividade from '../../components/Aula/Atividade';
 
 const { Item } = Menu;
+const firstContent = 'atividade';
 
 const Aula: FunctionComponent = () => {
 	const dispatch = useDispatch();
-	const [ content, setContent ] = useState('aula');
+	const [ content, setContent ] = useState(firstContent);
 
 	useEffect(
 		() => {
@@ -41,7 +42,7 @@ const Aula: FunctionComponent = () => {
 	return (
 		<AulaLayout>
 			<AulaSider>
-				<AulaMenu mode="inline" defaultSelectedKeys={[ 'aula' ]}>
+				<AulaMenu mode="inline" defaultSelectedKeys={[ firstContent ]}>
 					<Item key="aula" onClick={() => setContent('aula')}>
 						<span>
 							<Icon type="play-circle" />

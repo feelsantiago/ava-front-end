@@ -4,6 +4,7 @@ import { Layout, Menu, Icon } from 'antd';
 
 import { removeLayoutPadding } from '../../redux/layout/actions';
 import { AulaLayout, AulaSider, AulaContent, AulaMenu } from '../../assets/styles/pages/Aula';
+import VideoAula from '../../components/Aula/VideoAula';
 
 const { Item } = Menu;
 
@@ -45,7 +46,9 @@ const Aula: FunctionComponent = () => {
 					</Item>
 				</AulaMenu>
 			</AulaSider>
-			<AulaContent>Content</AulaContent>
+			<AulaContent>
+				<VideoAula />
+			</AulaContent>
 		</AulaLayout>
 	);
 };

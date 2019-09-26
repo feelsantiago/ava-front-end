@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Layout, Menu, Icon } from 'antd';
+import { Menu, Icon } from 'antd';
 
 import { removeLayoutPadding } from '../../redux/layout/actions';
 import { AulaLayout, AulaSider, AulaContent, AulaMenu } from '../../assets/styles/pages/Aula';

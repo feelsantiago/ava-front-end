@@ -22,7 +22,7 @@ const Message: FunctionComponent<MessageProps> = ({ name, text, time, owner }) =
 		<MessageArea owner={owner}>
 			<MessageContent>
 				<MessageImage>
-					<img src={userLogo} />
+					<img alt="user" src={userLogo} />
 				</MessageImage>
 				<MessageText>
 					<MessageName>{name}</MessageName>

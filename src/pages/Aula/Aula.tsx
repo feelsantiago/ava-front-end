@@ -12,7 +12,7 @@ const { Item } = Menu;
 
 const Aula: FunctionComponent = () => {
 	const dispatch = useDispatch();
-	const [ content, setContent ] = useState('discussao');
+	const [ content, setContent ] = useState('aula');
 
 	useEffect(
 		() => {
@@ -41,7 +41,7 @@ const Aula: FunctionComponent = () => {
 	return (
 		<AulaLayout>
 			<AulaSider>
-				<AulaMenu mode="inline" defaultSelectedKeys={[ 'discussao' ]}>
+				<AulaMenu mode="inline" defaultSelectedKeys={[ 'aula' ]}>
 					<Item key="aula" onClick={() => setContent('aula')}>
 						<span>
 							<Icon type="play-circle" />

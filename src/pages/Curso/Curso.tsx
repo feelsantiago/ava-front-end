@@ -24,13 +24,16 @@ const Curso: FunctionComponent = () => {
 	const dispatch = useDispatch();
 	const { history } = useRouter();
 
-	useEffect(() => {
-		dispatch(removeLayoutPadding({ padding: false }));
+	useEffect(
+		() => {
+			dispatch(removeLayoutPadding({ padding: false }));
 
-		return function returnLayoutPadding () {
-			dispatch(removeLayoutPadding({ padding: true }));
-		};
-	}, []);
+			return function returnLayoutPadding () {
+				dispatch(removeLayoutPadding({ padding: true }));
+			};
+		},
+		[ dispatch ]
+	);
 
 	/** Handle Curso Tree Selected Aula */
 	const onSelectHandle = (selectedKeys: string[], info: AntTreeNodeSelectedEvent) => {

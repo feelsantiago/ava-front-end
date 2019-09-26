@@ -9,7 +9,7 @@ import Discussao from '../../components/Aula/Discussao';
 import Atividade from '../../components/Aula/Atividade';
 
 const { Item } = Menu;
-const firstContent = 'atividade';
+const firstContent = 'aula';
 
 const Aula: FunctionComponent = () => {
 	const dispatch = useDispatch();

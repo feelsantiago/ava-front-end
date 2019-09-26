@@ -15,11 +15,14 @@ import { removeLayoutPadding } from '../../redux/layout/actions';
 
 import reactLogo from '../../assets/images/react-logo.svg';
 import professorLogo from '../../assets/images/professor-logo.svg';
+import { AntTreeNodeSelectedEvent } from 'antd/lib/tree';
+import useRouter from 'use-react-router';
 
 const { TreeNode } = Tree;
 
 const Curso: FunctionComponent = () => {
 	const dispatch = useDispatch();
+	const { history } = useRouter();
 
 	useEffect(() => {
 		dispatch(removeLayoutPadding({ padding: false }));
@@ -28,6 +31,11 @@ const Curso: FunctionComponent = () => {
 			dispatch(removeLayoutPadding({ padding: true }));
 		};
 	}, []);
+
+	/** Handle Curso Tree Selected Aula */
+	const onSelectHandle = (selectedKeys: string[], info: AntTreeNodeSelectedEvent) => {
+		history.push('/aula');
+	};
 
 	return (
 		<div id="app-curso-page">
@@ -50,7 +58,8 @@ const Curso: FunctionComponent = () => {
 						<Col span={1}>
 							<ProfessorLogoArea alt="professor-logo" src={professorLogo} />
 						</Col>
-						<Col span={23}>
+						<Col span={1} />
+						<Col span={22}>
 							<ProfessorDescriptionArea>
 								<h3>Professor</h3>
 								<p>
@@ -61,14 +70,14 @@ const Curso: FunctionComponent = () => {
 						</Col>
 					</Row>
 				</CursoProfessorArea>
-				<Tree checkable defaultExpandedKeys={[ '0', '1' ]}>
-					<TreeNode title="Modulo 1" key="0">
-						<TreeNode title="Aula 1" key="0-0" />
-						<TreeNode title="Aula 2" key="0-1" />
+				<Tree checkable defaultExpandedKeys={[ '0', '1' ]} onSelect={onSelectHandle}>
+					<TreeNode title="Modulo 1" key="0" disableCheckbox>
+						<TreeNode title="Aula 1" key="0-0" disableCheckbox />
+						<TreeNode title="Aula 2" key="0-1" disableCheckbox />
 					</TreeNode>
-					<TreeNode title="Modulo 12" key="1">
-						<TreeNode title="Aula 1" key="1-0" />
-						<TreeNode title="Aula 2" key="1-1" />
+					<TreeNode title="Modulo 12" key="1" disableCheckbox>
+						<TreeNode title="Aula 1" key="1-0" disableCheckbox />
+						<TreeNode title="Aula 2" key="1-1" disableCheckbox />
 					</TreeNode>
 				</Tree>
 			</CursoContent>

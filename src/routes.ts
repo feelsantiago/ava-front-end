@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import authGuard from './guards/auth-guard';
 import Curso from './pages/Curso';
+import Aula from './pages/Aula';
 
 const routes: Array<Route> = [
 	{
@@ -46,6 +47,11 @@ const routes: Array<Route> = [
 				path: 'curso',
 				exact: true,
 				component: Curso
+			},
+			{
+				path: 'aula',
+				exact: true,
+				component: Aula
 			}
 		]
 	}

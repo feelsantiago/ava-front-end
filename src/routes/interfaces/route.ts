@@ -3,7 +3,7 @@ import { GuardResolve } from '../guard';
 
 export interface Route {
 	path: string;
-	component: FunctionComponent;
+	component: FunctionComponent | any;
 	exact?: boolean;
 	guards?: Array<GuardResolve>;
 	redirectTo?: string;

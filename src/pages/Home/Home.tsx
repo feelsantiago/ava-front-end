@@ -29,7 +29,7 @@ const Home: FunctionComponent = () => {
 			<HomeCard background="#DCDE6D">
 				<HomeCardText>Javascript</HomeCardText>
 			</HomeCard>
-			<HomeCardAdd>
+			<HomeCardAdd onClick={() => history.push('criar/curso')}>
 				<AddPlusImg src={plus} />
 			</HomeCardAdd>
 		</HomeContent>

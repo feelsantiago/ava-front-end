@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { Menu as AntMenu, Icon } from 'antd';
 
-import authService from '../../services/auth-service';
+import authService from '../../services/auth.service';
 import { History } from 'history';
 
 interface MenuProps {

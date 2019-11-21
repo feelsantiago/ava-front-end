@@ -15,7 +15,7 @@ import { History } from 'history';
 import { LoginCard, LoginIcon, LoginSubmitButton, LoginForgot } from '../../assets/styles/components/LoginForm';
 import { TextCenter } from '../../assets/styles/components/Common';
 import LoginFormHeader from './LoginFormHeader';
-import authService from '../../services/auth-service';
+import authService from '../../services/auth.service';
 
 interface FormModel {
 	username: string;

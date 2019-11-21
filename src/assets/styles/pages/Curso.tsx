@@ -9,7 +9,10 @@ export const CursoHeader = styled.div`
 
 export const CursoContent = styled.div`padding: 24px;`;
 
-export const CursoDescription = styled.p`margin: none;`;
+export const CursoDescription = styled.p`
+	margin: none;
+	text-align: center;
+`;
 
 export const CursoSubscription = styled.div`text-align: center;`;
 

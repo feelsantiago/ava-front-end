@@ -8,4 +8,5 @@ export interface CursoModel {
 	professor: ProfessorModel;
 	owner: boolean;
 	modules: Array<ModuleModel>;
+	subscription: boolean;
 }

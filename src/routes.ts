@@ -45,12 +45,12 @@ const routes: Array<Route> = [
 				component: About
 			},
 			{
-				path: 'curso',
+				path: 'curso/:id',
 				exact: true,
 				component: Curso
 			},
 			{
-				path: 'aula',
+				path: 'aula/:id/:moduleIndex/:lessonIndex',
 				exact: true,
 				component: Aula
 			},

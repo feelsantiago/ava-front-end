@@ -11,24 +11,19 @@ import useRouter from 'use-react-router';
 
 import { HomeCard, HomeCardAdd, HomeCardText, HomeContent, AddPlusImg } from '../../assets/styles/pages/Home';
 import plus from '../../assets/images/plus.png';
+import { cursoService } from '../../services/curso.service';
 
 const Home: FunctionComponent = () => {
 	const { history } = useRouter();
 
 	return (
 		<HomeContent id="app-home">
-			<HomeCard background="#DCDE6D" onClick={() => history.push('curso')}>
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
-			<HomeCard background="#DCDE6D">
-				<HomeCardText>Javascript</HomeCardText>
-			</HomeCard>
+			{cursoService.getAll().map((curso, index) => (
+				<HomeCard key={index} background="#DCDE6D" onClick={() => history.push(`curso/${curso.id}`)}>
+					<HomeCardText>{curso.title}</HomeCardText>
+				</HomeCard>
+			))}
+
 			<HomeCardAdd onClick={() => history.push('criar/curso')}>
 				<AddPlusImg src={plus} />
 			</HomeCardAdd>

@@ -1,10 +1,11 @@
-import { CursoModel } from '../model/curso.model';
+import { CursoModel } from '../models/curso.model';
 
 export const cursos: Array<CursoModel> = [
 	{
 		id: '1d0449',
-		title: 'Aprenda React do Zero',
-		description: '',
+		title: 'React',
+		subscription: false,
+		description: 'Aprenda a criar um app react com rotas autenticas e utilizando Redux.',
 		professor: {
 			name: 'Filipe',
 			description: 'Senior React Developer At Ava da Kebrada'
@@ -52,7 +53,7 @@ export const cursos: Array<CursoModel> = [
 						]
 					},
 					{
-						video: 'https://www.youtube.com/watch?v=sYe4r8WXGQg',
+						video: 'https://www.youtube.com/embed/sYe4r8WXGQg',
 						title: 'Autenticando Rotas',
 						description: 'Controlando autenticação nas rotas',
 						messages: [

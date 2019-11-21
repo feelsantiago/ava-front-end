@@ -1,5 +1,5 @@
 import { cursos } from '../storage/cursos';
-import { CursoModel } from '../model/curso.model';
+import { CursoModel } from '../models/curso.model';
 import shortId from 'shortid';
 
 class CursoService {
@@ -7,8 +7,8 @@ class CursoService {
 		return cursos;
 	}
 
-	getById (id: string) {
-		cursos.find((curso) => curso.id === id);
+	getById (id: string | undefined) {
+		return cursos.find((curso) => curso.id === id);
 	}
 
 	insert (curso: CursoModel) {
@@ -17,4 +17,4 @@ class CursoService {
 	}
 }
 
-const cursoService = new CursoService();
+export const cursoService = new CursoService();

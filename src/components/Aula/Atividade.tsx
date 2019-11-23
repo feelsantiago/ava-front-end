@@ -3,12 +3,17 @@ import { Radio } from 'antd';
 import { Content, SendButton } from '../../assets/styles/components/Atividade';
 import { TextCenter } from '../../assets/styles/components/Common';
 import { ExerciseModel } from '../../models/exercise.model';
+import { useParams } from 'react-router';
+import useRouter from 'use-react-router';
 
 interface AtividadeProps {
 	exercise: Array<ExerciseModel>;
 }
 
 const Atividade: FunctionComponent<AtividadeProps> = ({ exercise }) => {
+	const { history } = useRouter();
+	const { id } = useParams();
+
 	return (
 		<TextCenter>
 			<Content>
@@ -25,7 +30,7 @@ const Atividade: FunctionComponent<AtividadeProps> = ({ exercise }) => {
 					</span>
 				))}
 			</Content>
-			<SendButton>Enviar</SendButton>
+			<SendButton onClick={() => history.push(`/curso/${id}`)}>Enviar</SendButton>
 		</TextCenter>
 	);
 };

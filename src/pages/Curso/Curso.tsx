@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Row, Col, Tree } from 'antd';
+import { Row, Col, Tree, Button } from 'antd';
 import useRouter from 'use-react-router';
 
 import {
@@ -65,16 +65,22 @@ const Curso: FunctionComponent = () => {
 			<CursoContent>
 				<CursoDescription>{curso.description}</CursoDescription>
 				<CursoSubscription>
-					<SubscriptionButton
-						size="large"
-						subscription={subscription}
-						onClick={() => {
-							curso.subscription = !curso.subscription;
-							setSubscription(curso.subscription);
-						}}
-					>
-						{subscription ? 'Inscrito' : 'Se Inscrever'}
-					</SubscriptionButton>
+					{curso.owner ? (
+						<Button size="large" onClick={() => history.push(`/editar/curso/${curso.id}`)}>
+							Editar Curso
+						</Button>
+					) : (
+						<SubscriptionButton
+							size="large"
+							subscription={subscription}
+							onClick={() => {
+								curso.subscription = !curso.subscription;
+								setSubscription(curso.subscription);
+							}}
+						>
+							{subscription ? 'Inscrito' : 'Se Inscrever'}
+						</SubscriptionButton>
+					)}
 				</CursoSubscription>
 				<CursoProfessorArea>
 					<Row>

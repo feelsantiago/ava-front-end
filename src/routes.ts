@@ -16,6 +16,8 @@ import authGuard from './guards/auth-guard';
 import Curso from './pages/Curso';
 import Aula from './pages/Aula';
 import CriarCurso from './components/Criar/CriarCurso';
+import EditarCurso from './components/Criar/EditarCurso';
+import EditarModulo from './components/Criar/EditarModulo';
 
 const routes: Array<Route> = [
 	{
@@ -58,6 +60,16 @@ const routes: Array<Route> = [
 				path: 'criar/curso',
 				exact: true,
 				component: CriarCurso
+			},
+			{
+				path: 'editar/curso/:id',
+				exact: true,
+				component: EditarCurso
+			},
+			{
+				path: 'editar/modulo/:id/:moduleIndex',
+				exact: true,
+				component: EditarModulo
 			}
 		]
 	}

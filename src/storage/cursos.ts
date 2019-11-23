@@ -10,7 +10,7 @@ export const cursos: Array<CursoModel> = [
 			name: 'Filipe',
 			description: 'Senior React Developer At Ava da Kebrada'
 		},
-		owner: true,
+		owner: false,
 		modules: [
 			{
 				name: 'Modulo 1',
@@ -134,5 +134,17 @@ export const cursos: Array<CursoModel> = [
 				]
 			}
 		]
+	},
+	{
+		id: '0',
+		title: 'Tese',
+		subscription: false,
+		description: 'Teste',
+		professor: {
+			name: 'Filipe',
+			description: 'Senior React Developer At Ava da Kebrada'
+		},
+		owner: true,
+		modules: []
 	}
 ];

@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Button, Row, Col, Tree } from 'antd';
+import { Row, Col, Tree } from 'antd';
 import useRouter from 'use-react-router';
 
 import {
@@ -10,7 +10,8 @@ import {
 	CursoSubscription,
 	CursoProfessorArea,
 	ProfessorLogoArea,
-	ProfessorDescriptionArea
+	ProfessorDescriptionArea,
+	SubscriptionButton
 } from '../../assets/styles/pages/Curso';
 import { removeLayoutPadding } from '../../redux/layout/actions';
 
@@ -19,6 +20,7 @@ import professorLogo from '../../assets/images/professor-logo.svg';
 import { AntTreeNodeSelectedEvent } from 'antd/lib/tree';
 import { useParams } from 'react-router';
 import { cursoService } from '../../services/curso.service';
+import { CursoModel } from '../../models/curso.model';
 
 const { TreeNode } = Tree;
 
@@ -26,7 +28,8 @@ const Curso: FunctionComponent = () => {
 	const dispatch = useDispatch();
 	const { history } = useRouter();
 	const { id } = useParams();
-	const curso = cursoService.getById(id);
+	const [ subscription, setSubscription ] = useState(false);
+	const [ curso, setCurso ] = useState<CursoModel>();
 
 	useEffect(
 		() => {
@@ -38,6 +41,12 @@ const Curso: FunctionComponent = () => {
 		},
 		[ dispatch ]
 	);
+
+	useEffect(() => {
+		const curso = cursoService.getById(id);
+		setSubscription(curso ? curso.subscription : false);
+		setCurso(curso);
+	}, []);
 
 	if (!curso) return <div>Curso Not Found</div>;
 
@@ -56,7 +65,16 @@ const Curso: FunctionComponent = () => {
 			<CursoContent>
 				<CursoDescription>{curso.description}</CursoDescription>
 				<CursoSubscription>
-					<Button size="large">Se Inscrever</Button>
+					<SubscriptionButton
+						size="large"
+						subscription={subscription}
+						onClick={() => {
+							curso.subscription = !curso.subscription;
+							setSubscription(curso.subscription);
+						}}
+					>
+						{subscription ? 'Inscrito' : 'Se Inscrever'}
+					</SubscriptionButton>
 				</CursoSubscription>
 				<CursoProfessorArea>
 					<Row>

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import React from 'react';
+import { Button } from 'antd';
 
 export const CursoHeader = styled.div`
 	padding-top: 20px;
@@ -23,3 +25,18 @@ export const CursoProfessorArea = styled.div`
 
 export const ProfessorLogoArea = styled.img`margin: 10px;`;
 export const ProfessorDescriptionArea = styled.div`margin: 10px;`;
+
+export const SubscriptionButton = styled((props) => <Button {...props} />)`
+	border-color: ${(props: { subscription: boolean }) => (props.subscription ? 'yellowgreen' : 'default')};
+	color: ${(props: { subscription: boolean }) => (props.subscription ? 'yellowgreen' : 'default')};
+
+	:focus {
+		border-color: ${(props: { subscription: boolean }) => (props.subscription ? 'yellowgreen' : 'default')};
+		color: ${(props: { subscription: boolean }) => (props.subscription ? 'yellowgreen' : 'default')};
+	}
+
+	:hover {
+		border-color: ${(props: { subscription: boolean }) => (props.subscription ? 'red' : 'yellowgreen')};
+		color: ${(props: { subscription: boolean }) => (props.subscription ? 'red' : 'yellowgreen')};
+	}
+`;

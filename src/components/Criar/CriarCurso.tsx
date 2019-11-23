@@ -5,6 +5,7 @@ import { History } from 'history';
 import useRouter from 'use-react-router';
 import { TextCenter } from '../../assets/styles/components/Common';
 import { CriarCursoSubmitButton } from '../../assets/styles/components/CriarCurso';
+import { cursoService } from '../../services/curso.service';
 
 const { TextArea } = Input;
 
@@ -18,6 +19,16 @@ const handleSubmit = (form: WrappedFormUtils | undefined, history: History) => {
 
 	form.validateFields((err, values: FormModel) => {
 		if (err) return;
+
+		cursoService.insert({
+			title: values.title,
+			description: values.description,
+			id: '0',
+			owner: true,
+			modules: [],
+			subscription: false,
+			professor: { name: 'User', description: 'Gerado Automaticamente' }
+		});
 
 		history.push('/');
 	});
@@ -48,7 +59,8 @@ const CriarCurso: FunctionComponent<FormComponentProps> = ({ form }) => {
 				onSubmit={(e) => {
 					e.preventDefault();
 					handleSubmit(form, history);
-				}}>
+				}}
+			>
 				<Form.Item label="Titulo">
 					{getFieldDecorator('title', {
 						rules: [ { required: true, message: 'Por favor insira o titulo do curso!' } ]

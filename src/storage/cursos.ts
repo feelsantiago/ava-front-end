@@ -145,6 +145,11 @@ export const cursos: Array<CursoModel> = [
 			description: 'Senior React Developer At Ava da Kebrada'
 		},
 		owner: true,
-		modules: []
+		modules: [
+			{
+				name: 'teste',
+				lessons: []
+			}
+		]
 	}
 ];

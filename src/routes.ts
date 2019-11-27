@@ -18,6 +18,7 @@ import Aula from './pages/Aula';
 import CriarCurso from './components/Criar/CriarCurso';
 import EditarCurso from './components/Criar/EditarCurso';
 import EditarModulo from './components/Criar/EditarModulo';
+import CriarAula from './components/Criar/CriarAula';
 
 const routes: Array<Route> = [
 	{
@@ -70,6 +71,11 @@ const routes: Array<Route> = [
 				path: 'editar/modulo/:id/:moduleIndex',
 				exact: true,
 				component: EditarModulo
+			},
+			{
+				path: 'criar/aula/:id/:moduleIndex/:aulaIndex?',
+				exact: true,
+				component: CriarAula
 			}
 		]
 	}
